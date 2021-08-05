@@ -1,8 +1,6 @@
 {
-  "title": "Ansible Lab",
-  "description": "Getting started with Ansible engine",
-  "difficulty": "Beginner",
-  "time": "60 minutes",
+  "title": "Ansible Workshop - IMAGE: Ansible",
+  "description": "Workshop of command-line Ansible and executing a Playbook",
   "details": {
     "steps": [
       {
@@ -28,35 +26,47 @@
       {
         "title": "Step 6",
         "text": "step6.md"
-      },
-      {
-        "title": "Step 7",
-        "text": "step7.md"
-      },
-      {
-        "title": "Step 8",
-        "text": "step8.md"
-      },
-      {
-        "title": "Step 9",
-        "text": "step9.md"
-      },
-      {
-        "title": "Step 10",
-        "text": "step10.md"
       }
     ],
+    "assets": {
+        "host01": [
+          {
+            "file": "ansible.cfg",
+            "target": "/root"
+          },
+          {
+            "file": "hosts",
+            "target": "/root"
+          },
+          {
+            "file": "playbook.yml",
+            "target": "/root"
+          },
+          {
+            "file": "hostname.yml",
+            "target": "/root"
+          },
+          {
+            "file": "config",
+            "target": "/root/.ssh"
+          }
+        ]
+    },
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "credits": "__Author:__ Jason Johnson",
+      "courseData": "background.sh",
+      "code": "foreground.sh"
     },
     "finish": {
       "text": "finish.md"
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal",
+    "terminals": [{"name": "control", "target":"host01"},{"name":"host02","target":"host02"},{"name":"host03","target":"host03"}]
   },
   "backend": {
-    "imageid": "ansible-centos"
+    "imageid": "ansible"
   }
 }
